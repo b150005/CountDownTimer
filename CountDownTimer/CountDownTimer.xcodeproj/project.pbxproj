@@ -1,0 +1,469 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		14403F5927315830009A08F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14403F5827315830009A08F7 /* AppDelegate.swift */; };
+		14403F5D27315830009A08F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14403F5C27315830009A08F7 /* Assets.xcassets */; };
+		14403F6827315866009A08F7 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 14403F6727315866009A08F7 /* README.md */; };
+		14403F7E2731589A009A08F7 /* Preferences.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14403F6A27315899009A08F7 /* Preferences.storyboard */; };
+		14403F7F2731589A009A08F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14403F6B27315899009A08F7 /* Main.storyboard */; };
+		14403F802731589A009A08F7 /* DigitalPreviewLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14403F6E27315899009A08F7 /* DigitalPreviewLabel.swift */; };
+		14403F812731589A009A08F7 /* DraggableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14403F6F27315899009A08F7 /* DraggableImageView.swift */; };
+		14403F822731589A009A08F7 /* AnimationImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14403F7027315899009A08F7 /* AnimationImageView.swift */; };
+		14403F832731589A009A08F7 /* HandImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14403F7127315899009A08F7 /* HandImageView.swift */; };
+		14403F842731589A009A08F7 /* PreferencesWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14403F7227315899009A08F7 /* PreferencesWindow.swift */; };
+		14403F852731589A009A08F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14403F7427315899009A08F7 /* ViewController.swift */; };
+		14403F862731589A009A08F7 /* GeneralPreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14403F7527315899009A08F7 /* GeneralPreferencesViewController.swift */; };
+		14403F872731589A009A08F7 /* PreferencesTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14403F7627315899009A08F7 /* PreferencesTabViewController.swift */; };
+		14403F882731589A009A08F7 /* ExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14403F7727315899009A08F7 /* ExtensionViewController.swift */; };
+		14403F892731589A009A08F7 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14403F7927315899009A08F7 /* Extension.swift */; };
+		14403F8A2731589A009A08F7 /* GeneralPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14403F7A27315899009A08F7 /* GeneralPreferences.swift */; };
+		14403F8B2731589A009A08F7 /* DigitalTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14403F7B27315899009A08F7 /* DigitalTime.swift */; };
+		14403F8C2731589A009A08F7 /* AnalogTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14403F7C27315899009A08F7 /* AnalogTime.swift */; };
+		14403F8D2731589A009A08F7 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14403F7D2731589A009A08F7 /* WindowController.swift */; };
+		14403F9327315EF7009A08F7 /* KeyboardShortcuts in Frameworks */ = {isa = PBXBuildFile; productRef = 14403F9227315EF7009A08F7 /* KeyboardShortcuts */; };
+		14403F9527315F2F009A08F7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14403F9427315F2F009A08F7 /* Constants.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		14403F5527315830009A08F7 /* CountDownTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountDownTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		14403F5827315830009A08F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		14403F5C27315830009A08F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		14403F6127315830009A08F7 /* CountDownTimer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CountDownTimer.entitlements; sourceTree = "<group>"; };
+		14403F6727315866009A08F7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		14403F6A27315899009A08F7 /* Preferences.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Preferences.storyboard; sourceTree = "<group>"; };
+		14403F6C27315899009A08F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		14403F6E27315899009A08F7 /* DigitalPreviewLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DigitalPreviewLabel.swift; sourceTree = "<group>"; };
+		14403F6F27315899009A08F7 /* DraggableImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableImageView.swift; sourceTree = "<group>"; };
+		14403F7027315899009A08F7 /* AnimationImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationImageView.swift; sourceTree = "<group>"; };
+		14403F7127315899009A08F7 /* HandImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HandImageView.swift; sourceTree = "<group>"; };
+		14403F7227315899009A08F7 /* PreferencesWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesWindow.swift; sourceTree = "<group>"; };
+		14403F7427315899009A08F7 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		14403F7527315899009A08F7 /* GeneralPreferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralPreferencesViewController.swift; sourceTree = "<group>"; };
+		14403F7627315899009A08F7 /* PreferencesTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesTabViewController.swift; sourceTree = "<group>"; };
+		14403F7727315899009A08F7 /* ExtensionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionViewController.swift; sourceTree = "<group>"; };
+		14403F7927315899009A08F7 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		14403F7A27315899009A08F7 /* GeneralPreferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralPreferences.swift; sourceTree = "<group>"; };
+		14403F7B27315899009A08F7 /* DigitalTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DigitalTime.swift; sourceTree = "<group>"; };
+		14403F7C27315899009A08F7 /* AnalogTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalogTime.swift; sourceTree = "<group>"; };
+		14403F7D2731589A009A08F7 /* WindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
+		14403F9427315F2F009A08F7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		14403F5227315830009A08F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14403F9327315EF7009A08F7 /* KeyboardShortcuts in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		14403F4C27315830009A08F7 = {
+			isa = PBXGroup;
+			children = (
+				14403F5727315830009A08F7 /* CountDownTimer */,
+				14403F5627315830009A08F7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		14403F5627315830009A08F7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				14403F5527315830009A08F7 /* CountDownTimer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		14403F5727315830009A08F7 /* CountDownTimer */ = {
+			isa = PBXGroup;
+			children = (
+				14403F5827315830009A08F7 /* AppDelegate.swift */,
+				14403F7827315899009A08F7 /* Model */,
+				14403F6927315899009A08F7 /* Storyboard */,
+				14403F6D27315899009A08F7 /* View */,
+				14403F7327315899009A08F7 /* ViewController */,
+				14403F7D2731589A009A08F7 /* WindowController.swift */,
+				14403F6727315866009A08F7 /* README.md */,
+				14403F5C27315830009A08F7 /* Assets.xcassets */,
+				14403F6127315830009A08F7 /* CountDownTimer.entitlements */,
+			);
+			path = CountDownTimer;
+			sourceTree = "<group>";
+		};
+		14403F6927315899009A08F7 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				14403F6A27315899009A08F7 /* Preferences.storyboard */,
+				14403F6B27315899009A08F7 /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		14403F6D27315899009A08F7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				14403F6E27315899009A08F7 /* DigitalPreviewLabel.swift */,
+				14403F6F27315899009A08F7 /* DraggableImageView.swift */,
+				14403F7027315899009A08F7 /* AnimationImageView.swift */,
+				14403F7127315899009A08F7 /* HandImageView.swift */,
+				14403F7227315899009A08F7 /* PreferencesWindow.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		14403F7327315899009A08F7 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				14403F7427315899009A08F7 /* ViewController.swift */,
+				14403F7527315899009A08F7 /* GeneralPreferencesViewController.swift */,
+				14403F7627315899009A08F7 /* PreferencesTabViewController.swift */,
+				14403F7727315899009A08F7 /* ExtensionViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		14403F7827315899009A08F7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				14403F7927315899009A08F7 /* Extension.swift */,
+				14403F7A27315899009A08F7 /* GeneralPreferences.swift */,
+				14403F7B27315899009A08F7 /* DigitalTime.swift */,
+				14403F7C27315899009A08F7 /* AnalogTime.swift */,
+				14403F9427315F2F009A08F7 /* Constants.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		14403F5427315830009A08F7 /* CountDownTimer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 14403F6427315830009A08F7 /* Build configuration list for PBXNativeTarget "CountDownTimer" */;
+			buildPhases = (
+				14403F5127315830009A08F7 /* Sources */,
+				14403F5227315830009A08F7 /* Frameworks */,
+				14403F5327315830009A08F7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CountDownTimer;
+			packageProductDependencies = (
+				14403F9227315EF7009A08F7 /* KeyboardShortcuts */,
+			);
+			productName = CountDownTimer;
+			productReference = 14403F5527315830009A08F7 /* CountDownTimer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		14403F4D27315830009A08F7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					14403F5427315830009A08F7 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+				};
+			};
+			buildConfigurationList = 14403F5027315830009A08F7 /* Build configuration list for PBXProject "CountDownTimer" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 14403F4C27315830009A08F7;
+			packageReferences = (
+				14403F9127315EF7009A08F7 /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */,
+			);
+			productRefGroup = 14403F5627315830009A08F7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				14403F5427315830009A08F7 /* CountDownTimer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		14403F5327315830009A08F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14403F6827315866009A08F7 /* README.md in Resources */,
+				14403F7F2731589A009A08F7 /* Main.storyboard in Resources */,
+				14403F5D27315830009A08F7 /* Assets.xcassets in Resources */,
+				14403F7E2731589A009A08F7 /* Preferences.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		14403F5127315830009A08F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				14403F862731589A009A08F7 /* GeneralPreferencesViewController.swift in Sources */,
+				14403F8A2731589A009A08F7 /* GeneralPreferences.swift in Sources */,
+				14403F832731589A009A08F7 /* HandImageView.swift in Sources */,
+				14403F892731589A009A08F7 /* Extension.swift in Sources */,
+				14403F8B2731589A009A08F7 /* DigitalTime.swift in Sources */,
+				14403F802731589A009A08F7 /* DigitalPreviewLabel.swift in Sources */,
+				14403F882731589A009A08F7 /* ExtensionViewController.swift in Sources */,
+				14403F9527315F2F009A08F7 /* Constants.swift in Sources */,
+				14403F8C2731589A009A08F7 /* AnalogTime.swift in Sources */,
+				14403F812731589A009A08F7 /* DraggableImageView.swift in Sources */,
+				14403F872731589A009A08F7 /* PreferencesTabViewController.swift in Sources */,
+				14403F822731589A009A08F7 /* AnimationImageView.swift in Sources */,
+				14403F842731589A009A08F7 /* PreferencesWindow.swift in Sources */,
+				14403F8D2731589A009A08F7 /* WindowController.swift in Sources */,
+				14403F852731589A009A08F7 /* ViewController.swift in Sources */,
+				14403F5927315830009A08F7 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		14403F6B27315899009A08F7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				14403F6C27315899009A08F7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		14403F6227315830009A08F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		14403F6327315830009A08F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		14403F6527315830009A08F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CountDownTimer/CountDownTimer.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9B9T932RXM;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = b150005.CountDownTimer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		14403F6627315830009A08F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = CountDownTimer/CountDownTimer.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9B9T932RXM;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = b150005.CountDownTimer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		14403F5027315830009A08F7 /* Build configuration list for PBXProject "CountDownTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14403F6227315830009A08F7 /* Debug */,
+				14403F6327315830009A08F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		14403F6427315830009A08F7 /* Build configuration list for PBXNativeTarget "CountDownTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				14403F6527315830009A08F7 /* Debug */,
+				14403F6627315830009A08F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		14403F9127315EF7009A08F7 /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sindresorhus/KeyboardShortcuts";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		14403F9227315EF7009A08F7 /* KeyboardShortcuts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 14403F9127315EF7009A08F7 /* XCRemoteSwiftPackageReference "KeyboardShortcuts" */;
+			productName = KeyboardShortcuts;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 14403F4D27315830009A08F7 /* Project object */;
+}

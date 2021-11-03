@@ -1,0 +1,794 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="bee-RD-vJg">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="19455"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Window Controller-->
+        <scene sceneID="dIk-30-XMO">
+            <objects>
+                <windowController showSeguePresentationStyle="single" id="bee-RD-vJg" sceneMemberID="viewController">
+                    <window key="window" title="PreferencesForSealily" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="1a1-bh-QmB" customClass="PreferencesWindow" customModule="CountDownTimer" customModuleProvider="target">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
+                        <rect key="contentRect" x="2985" y="462" width="450" height="300"/>
+                        <rect key="screenRect" x="2560" y="0.0" width="2560" height="1415"/>
+                        <view key="contentView" id="FuP-J7-wew">
+                            <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </view>
+                        <connections>
+                            <outlet property="delegate" destination="bee-RD-vJg" id="utD-7w-lJS"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="L2U-bR-Nz7" kind="relationship" relationship="window.shadowedContentViewController" id="YRH-O0-gmr"/>
+                    </connections>
+                </windowController>
+                <customObject id="B5M-gh-jbv" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1017" y="35"/>
+        </scene>
+        <!--Preferences Tab View Controller-->
+        <scene sceneID="SdS-OZ-sOD">
+            <objects>
+                <tabViewController selectedTabViewItemIndex="0" id="L2U-bR-Nz7" customClass="PreferencesTabViewController" customModule="CountDownTimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabViewItems>
+                        <tabViewItem label="General" identifier="General" id="B3e-Nj-BLV"/>
+                        <tabViewItem label="Description" identifier="Description" id="sJG-Fr-Qfh"/>
+                    </tabViewItems>
+                    <tabView key="tabView" type="noTabsNoBorder" id="FqY-0g-loa">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <font key="font" metaFont="message"/>
+                        <connections>
+                            <outlet property="delegate" destination="L2U-bR-Nz7" id="w8w-a9-gXt"/>
+                        </connections>
+                    </tabView>
+                    <connections>
+                        <outlet property="tabView" destination="FqY-0g-loa" id="zYU-Oo-oLC"/>
+                        <segue destination="APp-CA-AX7" kind="relationship" relationship="tabItems" id="dDu-g6-spk"/>
+                        <segue destination="dfK-Rb-bSo" kind="relationship" relationship="tabItems" id="SpK-A5-SFs"/>
+                    </connections>
+                </tabViewController>
+                <customObject id="Cnt-a8-ZZz" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-491" y="30.5"/>
+        </scene>
+        <!--General Preferences View Controller-->
+        <scene sceneID="f6l-ov-fhJ">
+            <objects>
+                <viewController id="APp-CA-AX7" customClass="GeneralPreferencesViewController" customModule="CountDownTimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <scrollView key="view" autoresizesSubviews="NO" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" horizontalScrollElasticity="none" id="Mzy-17-MeP">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="975"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <clipView key="contentView" drawsBackground="NO" id="oh1-zz-C3h">
+                            <rect key="frame" x="1" y="1" width="448" height="973"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <view id="1jb-dQ-mhp">
+                                    <rect key="frame" x="0.0" y="0.0" width="450" height="925"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lNT-gT-98H">
+                                            <rect key="frame" x="18" y="679" width="68" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" title="プレビュー:" id="eie-k5-n3L">
+                                                <font key="font" usesAppearanceFont="YES"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Th3-hT-6fU">
+                                            <rect key="frame" x="352" y="242" width="41" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" title="後まで" id="rA2-SP-QAQ">
+                                                <font key="font" usesAppearanceFont="YES"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <datePicker verticalHuggingPriority="750" fixedFrame="YES" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="FcY-O2-pSs">
+                                            <rect key="frame" x="234" y="240" width="115" height="28"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <datePickerCell key="cell" borderStyle="bezel" alignment="left" useCurrentDate="YES" id="Nj9-G2-cGw">
+                                                <font key="font" metaFont="system"/>
+                                                <date key="date" timeIntervalSinceReferenceDate="657598392.20938098">
+                                                    <!--2021-11-03 02:13:12 +0000-->
+                                                </date>
+                                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <datePickerElements key="datePickerElements" hour="YES" minute="YES" second="YES"/>
+                                            </datePickerCell>
+                                            <connections>
+                                                <action selector="setDuration:" target="APp-CA-AX7" id="9rW-xg-hOC"/>
+                                            </connections>
+                                        </datePicker>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yq3-lD-vF6">
+                                            <rect key="frame" x="352" y="270" width="41" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" title="前から" id="gor-JV-X0b">
+                                                <font key="font" usesAppearanceFont="YES"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <datePicker verticalHuggingPriority="750" fixedFrame="YES" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="ngL-o0-mox">
+                                            <rect key="frame" x="234" y="269" width="122" height="28"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <datePickerCell key="cell" borderStyle="bezel" alignment="left" datePickerMode="range" useCurrentDate="YES" id="TuH-ga-Ozt">
+                                                <font key="font" metaFont="system"/>
+                                                <date key="date" timeIntervalSinceReferenceDate="657598392.21301198">
+                                                    <!--2021-11-03 02:13:12 +0000-->
+                                                </date>
+                                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <datePickerElements key="datePickerElements" hour="YES" minute="YES" second="YES"/>
+                                            </datePickerCell>
+                                            <connections>
+                                                <action selector="setDuration:" target="APp-CA-AX7" id="Fnf-6r-icK"/>
+                                            </connections>
+                                        </datePicker>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nZ5-ii-fGY">
+                                            <rect key="frame" x="18" y="243" width="128" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" title="フォントカラー(直後): " id="c2q-l4-TgU">
+                                                <font key="font" usesAppearanceFont="YES"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <colorWell fixedFrame="YES" tag="3" translatesAutoresizingMaskIntoConstraints="NO" id="EAl-L6-KLj">
+                                            <rect key="frame" x="152" y="239" width="71" height="23"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <color key="color" red="0.05813049898" green="0.055541899059999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="changeFontColor:" target="APp-CA-AX7" id="mW5-gJ-GhH"/>
+                                            </connections>
+                                        </colorWell>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m1p-JL-hYp">
+                                            <rect key="frame" x="74" y="493" width="72" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" title="モード選択: " id="0R3-SL-UsA">
+                                                <font key="font" usesAppearanceFont="YES"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <colorWell fixedFrame="YES" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="bOf-6k-9xN">
+                                            <rect key="frame" x="152" y="270" width="71" height="23"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <color key="color" red="0.05813049898" green="0.055541899059999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="changeFontColor:" target="APp-CA-AX7" id="fir-4u-wN7"/>
+                                            </connections>
+                                        </colorWell>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ll9-AX-yAt">
+                                            <rect key="frame" x="18" y="273" width="128" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" title="フォントカラー(直前): " id="KJQ-Xc-7AL">
+                                                <font key="font" usesAppearanceFont="YES"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nsa-eI-lC9">
+                                            <rect key="frame" x="18" y="187" width="68" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" title="プレビュー:" id="LBc-ET-hrU">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L1h-ZS-RJ5">
+                                            <rect key="frame" x="365" y="211" width="43" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="mGG-TU-yXQ">
+                                                <numberFormatter key="formatter" formatterBehavior="custom10_4" numberStyle="decimal" formatWidth="-1" minimumIntegerDigits="1" maximumIntegerDigits="3" maximumFractionDigits="1" id="Ged-Zx-Tte">
+                                                    <integer key="multiplier" value="100"/>
+                                                    <real key="minimum" value="0.0"/>
+                                                    <real key="maximum" value="1"/>
+                                                </numberFormatter>
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <action selector="setOpacityWithTextField:" target="APp-CA-AX7" id="xjD-yh-O81"/>
+                                            </connections>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KXs-r4-veA">
+                                            <rect key="frame" x="414" y="214" width="16" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" title="%" id="Iev-dF-8Cb">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y88-yj-E4e">
+                                            <rect key="frame" x="150" y="205" width="211" height="28"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <sliderCell key="cell" state="on" alignment="left" maxValue="1" doubleValue="0.5" tickMarkPosition="above" numberOfTickMarks="11" sliderType="linear" id="na8-9D-r1q"/>
+                                            <connections>
+                                                <action selector="setOpacityWithSlider:" target="APp-CA-AX7" id="cl0-zJ-4zI"/>
+                                            </connections>
+                                        </slider>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pRg-kp-aA3">
+                                            <rect key="frame" x="98" y="213" width="48" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" title="透明度: " id="ghn-7G-B5z">
+                                                <font key="font" usesAppearanceFont="YES"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <colorWell fixedFrame="YES" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="EbB-up-9yT">
+                                            <rect key="frame" x="152" y="301" width="71" height="23"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <color key="color" red="0.05813049898" green="0.055541899059999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="changeFontColor:" target="APp-CA-AX7" id="JyI-BP-Bvp"/>
+                                            </connections>
+                                        </colorWell>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aFX-eo-iGj">
+                                            <rect key="frame" x="18" y="304" width="128" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" title="フォントカラー(基本): " id="tHe-aT-Ovp">
+                                                <font key="font" usesAppearanceFont="YES"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o5L-Bl-46m">
+                                            <rect key="frame" x="376" y="326" width="59" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="push" title="選択" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="YLL-QK-tki">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="selectFont:" target="APp-CA-AX7" id="nnu-cd-LBu"/>
+                                            </connections>
+                                        </button>
+                                        <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R3J-eT-SZg">
+                                            <rect key="frame" x="152" y="332" width="223" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="VNK-AU-0Mu">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uiW-Fc-2jL">
+                                            <rect key="frame" x="86" y="333" width="60" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" title="フォント: " id="OSi-pT-SA2">
+                                                <font key="font" usesAppearanceFont="YES"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" tag="8" translatesAutoresizingMaskIntoConstraints="NO" id="dg7-Rw-3N2">
+                                            <rect key="frame" x="376" y="350" width="59" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="push" title="選択" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Tvb-2Y-pfM">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="selectGIF:" target="APp-CA-AX7" id="eOR-3x-zb8"/>
+                                            </connections>
+                                        </button>
+                                        <textField verticalHuggingPriority="750" fixedFrame="YES" tag="8" translatesAutoresizingMaskIntoConstraints="NO" id="8PV-jJ-lEp">
+                                            <rect key="frame" x="152" y="356" width="223" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="s6g-tR-MLC">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <action selector="selectGIFWithTextField:" target="APp-CA-AX7" id="fB4-24-h0I"/>
+                                            </connections>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lGl-Hy-zB4">
+                                            <rect key="frame" x="18" y="357" width="128" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" title="アニメーションGIF④: " id="jy8-Ex-H38">
+                                                <font key="font" usesAppearanceFont="YES"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" tag="7" translatesAutoresizingMaskIntoConstraints="NO" id="PxR-m9-7bO">
+                                            <rect key="frame" x="376" y="374" width="59" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="push" title="選択" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Zqw-bi-QZR">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="selectGIF:" target="APp-CA-AX7" id="0Pe-Yb-eyh"/>
+                                            </connections>
+                                        </button>
+                                        <textField verticalHuggingPriority="750" fixedFrame="YES" tag="7" translatesAutoresizingMaskIntoConstraints="NO" id="YxG-Gf-Jwd">
+                                            <rect key="frame" x="152" y="380" width="223" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="EvA-ZJ-0d6">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <action selector="selectGIFWithTextField:" target="APp-CA-AX7" id="Ekw-jc-Vre"/>
+                                            </connections>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F2f-60-dKy">
+                                            <rect key="frame" x="18" y="381" width="128" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" title="アニメーションGIF③: " id="Yg8-oS-awW">
+                                                <font key="font" usesAppearanceFont="YES"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uqF-ny-omw">
+                                            <rect key="frame" x="98" y="408" width="330" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="check" title="期限を超過した場合は現在時刻を表示" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="KEy-iD-XMm">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" usesAppearanceFont="YES"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="switchCurrentTime:" target="APp-CA-AX7" id="Tmd-c9-rJt"/>
+                                            </connections>
+                                        </button>
+                                        <datePicker verticalHuggingPriority="750" fixedFrame="YES" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="A6F-L0-Dfe">
+                                            <rect key="frame" x="152" y="429" width="279" height="28"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <datePickerCell key="cell" borderStyle="bezel" alignment="left" useCurrentDate="YES" id="F3W-Ws-kLl">
+                                                <font key="font" metaFont="system"/>
+                                                <date key="date" timeIntervalSinceReferenceDate="657598392.23342204">
+                                                    <!--2021-11-03 02:13:12 +0000-->
+                                                </date>
+                                                <date key="minDate" timeIntervalSinceReferenceDate="631119600">
+                                                    <!--2020-12-31 15:00:00 +0000-->
+                                                </date>
+                                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <datePickerElements key="datePickerElements" year="YES" month="YES" day="YES" hour="YES" minute="YES" second="YES"/>
+                                            </datePickerCell>
+                                            <connections>
+                                                <action selector="setDueDate:" target="APp-CA-AX7" id="g1q-E7-vxb"/>
+                                            </connections>
+                                        </datePicker>
+                                        <datePicker verticalHuggingPriority="750" fixedFrame="YES" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="eqp-zq-dTz">
+                                            <rect key="frame" x="152" y="461" width="279" height="28"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <datePickerCell key="cell" borderStyle="bezel" alignment="left" useCurrentDate="YES" id="73C-6Z-jiE">
+                                                <font key="font" metaFont="system"/>
+                                                <date key="date" timeIntervalSinceReferenceDate="657598392.23619998">
+                                                    <!--2021-11-03 02:13:12 +0000-->
+                                                </date>
+                                                <date key="minDate" timeIntervalSinceReferenceDate="631119600">
+                                                    <!--2020-12-31 15:00:00 +0000-->
+                                                </date>
+                                                <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <datePickerElements key="datePickerElements" year="YES" month="YES" day="YES" hour="YES" minute="YES" second="YES"/>
+                                            </datePickerCell>
+                                            <connections>
+                                                <action selector="setDueDate:" target="APp-CA-AX7" id="nmt-2N-aVG"/>
+                                            </connections>
+                                        </datePicker>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9gZ-7T-WxU">
+                                            <rect key="frame" x="98" y="433" width="48" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" title="期限②: " id="Oqv-DQ-6ZC">
+                                                <font key="font" usesAppearanceFont="YES"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L2M-CO-pek">
+                                            <rect key="frame" x="98" y="465" width="48" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" title="期限①: " id="Ic9-Jm-ViE">
+                                                <font key="font" usesAppearanceFont="YES"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bnz-gk-yAH">
+                                            <rect key="frame" x="229" y="492" width="51" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="radio" title="時計" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="eTZ-dV-DlH">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" usesAppearanceFont="YES"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="setIsTimer:" target="APp-CA-AX7" id="xUd-9m-xiz"/>
+                                            </connections>
+                                        </button>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w5A-7C-YAe">
+                                            <rect key="frame" x="148" y="492" width="75" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="radio" title="タイマー" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="YJB-Wx-shp">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" usesAppearanceFont="YES"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="setIsTimer:" target="APp-CA-AX7" id="WnB-6z-nUZ"/>
+                                            </connections>
+                                        </button>
+                                        <textField verticalHuggingPriority="750" fixedFrame="YES" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="UcB-cQ-LsO">
+                                            <rect key="frame" x="152" y="821" width="223" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="b9j-Fn-vHB">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <action selector="selectGIFWithTextField:" target="APp-CA-AX7" id="dCg-aA-ob9"/>
+                                            </connections>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" fixedFrame="YES" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="V6O-hs-6Yj">
+                                            <rect key="frame" x="152" y="797" width="223" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="6Ek-bt-pfc">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <action selector="selectGIFWithTextField:" target="APp-CA-AX7" id="S8z-S8-KSe"/>
+                                            </connections>
+                                        </textField>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" tag="3" translatesAutoresizingMaskIntoConstraints="NO" id="nuk-wa-WoD">
+                                            <rect key="frame" x="376" y="767" width="59" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="push" title="選択" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="iii-Nm-s4f">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="selectGIF:" target="APp-CA-AX7" id="agQ-df-zAt"/>
+                                            </connections>
+                                        </button>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="CDx-bG-ryp">
+                                            <rect key="frame" x="376" y="815" width="59" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="push" title="選択" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Slb-2e-SDU">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="selectGIF:" target="APp-CA-AX7" id="jEV-UC-75I"/>
+                                            </connections>
+                                        </button>
+                                        <textField verticalHuggingPriority="750" fixedFrame="YES" tag="3" translatesAutoresizingMaskIntoConstraints="NO" id="Z72-vR-z3K">
+                                            <rect key="frame" x="152" y="773" width="223" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="zbR-ou-p4X">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <action selector="selectGIFWithTextField:" target="APp-CA-AX7" id="lpI-cP-aOC"/>
+                                            </connections>
+                                        </textField>
+                                        <textField verticalHuggingPriority="750" fixedFrame="YES" tag="4" translatesAutoresizingMaskIntoConstraints="NO" id="bGO-m6-taW">
+                                            <rect key="frame" x="152" y="749" width="223" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="zEw-bf-F6r">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <action selector="selectGIFWithTextField:" target="APp-CA-AX7" id="ORg-Xj-tXF"/>
+                                            </connections>
+                                        </textField>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" tag="6" translatesAutoresizingMaskIntoConstraints="NO" id="AKX-aF-fAU">
+                                            <rect key="frame" x="376" y="696" width="59" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="push" title="選択" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="bY9-Qk-nzK">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="selectGIF:" target="APp-CA-AX7" id="5v9-3F-MOV"/>
+                                            </connections>
+                                        </button>
+                                        <textField verticalHuggingPriority="750" fixedFrame="YES" tag="6" translatesAutoresizingMaskIntoConstraints="NO" id="LaX-89-hdY">
+                                            <rect key="frame" x="152" y="702" width="223" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="uhx-14-yXp">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <action selector="selectGIFWithTextField:" target="APp-CA-AX7" id="31x-2Q-M87"/>
+                                            </connections>
+                                        </textField>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" tag="4" translatesAutoresizingMaskIntoConstraints="NO" id="YTZ-e0-I3V">
+                                            <rect key="frame" x="376" y="744" width="59" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="push" title="選択" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Lt6-NS-TOO">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="selectGIF:" target="APp-CA-AX7" id="n8y-kU-Wi8"/>
+                                            </connections>
+                                        </button>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" tag="5" translatesAutoresizingMaskIntoConstraints="NO" id="Jaz-eT-iXT">
+                                            <rect key="frame" x="376" y="720" width="59" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="push" title="選択" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="uhI-mj-D69">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="selectGIF:" target="APp-CA-AX7" id="Mpe-ks-Oyf"/>
+                                            </connections>
+                                        </button>
+                                        <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="aC7-JU-FVu">
+                                            <rect key="frame" x="20" y="513" width="408" height="5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        </box>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BC4-eu-KQe">
+                                            <rect key="frame" x="18" y="524" width="412" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" title="デジタル時計" id="P5Y-eB-Oaf">
+                                                <font key="font" usesAppearanceFont="YES"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="jbJ-y6-tq9">
+                                            <rect key="frame" x="20" y="546" width="410" height="5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        </box>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wQa-K9-LA9">
+                                            <rect key="frame" x="18" y="703" width="128" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" title="アニメーションGIF②: " id="njQ-va-XwT">
+                                                <font key="font" usesAppearanceFont="YES"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dWs-MO-pLK">
+                                            <rect key="frame" x="18" y="727" width="128" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" title="アニメーションGIF①: " id="1p1-B7-cum">
+                                                <font key="font" usesAppearanceFont="YES"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fNl-TN-33H">
+                                            <rect key="frame" x="90" y="750" width="56" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" title="秒針GIF: " id="f2W-7Z-9OD">
+                                                <font key="font" usesAppearanceFont="YES"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wdd-ZQ-rXY">
+                                            <rect key="frame" x="90" y="774" width="56" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" title="長針GIF: " id="eSP-fz-OBF">
+                                                <font key="font" usesAppearanceFont="YES"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Ch-Xi-KvN">
+                                            <rect key="frame" x="90" y="798" width="56" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" title="短針GIF: " id="NiR-sG-EKz">
+                                                <font key="font" usesAppearanceFont="YES"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="ZGB-lP-W49">
+                                            <rect key="frame" x="376" y="791" width="59" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="push" title="選択" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ZTf-NE-w1u">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" usesAppearanceFont="YES"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="selectGIF:" target="APp-CA-AX7" id="hQc-pW-gfc"/>
+                                            </connections>
+                                        </button>
+                                        <textField verticalHuggingPriority="750" fixedFrame="YES" tag="5" translatesAutoresizingMaskIntoConstraints="NO" id="v4Z-zZ-EqX">
+                                            <rect key="frame" x="152" y="726" width="223" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="14O-Eq-lTh">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                            <connections>
+                                                <action selector="selectGIFWithTextField:" target="APp-CA-AX7" id="ZPY-E1-8Ka"/>
+                                            </connections>
+                                        </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="do0-Mn-eKs">
+                                            <rect key="frame" x="91" y="822" width="55" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" title="盤面GIF: " id="HVV-eq-hHK">
+                                                <font key="font" usesAppearanceFont="YES"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="CF1-VY-GLO">
+                                            <rect key="frame" x="20" y="845" width="408" height="5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        </box>
+                                        <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="rJ0-iX-ke4">
+                                            <rect key="frame" x="20" y="878" width="410" height="5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        </box>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RIY-Hy-R6s">
+                                            <rect key="frame" x="18" y="856" width="412" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" title="アナログ時計" id="dQx-Tw-aed">
+                                                <font key="font" usesAppearanceFont="YES"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YsQ-1d-vMh">
+                                            <rect key="frame" x="197" y="890" width="99" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="radio" title="デジタル時計" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="DHf-g2-6SJ">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" usesAppearanceFont="YES"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="setIsAnalog:" target="APp-CA-AX7" id="W7r-8J-fu7"/>
+                                            </connections>
+                                        </button>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8BA-oh-pOG">
+                                            <rect key="frame" x="92" y="890" width="99" height="18"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="radio" title="アナログ時計" bezelStyle="regularSquare" imagePosition="left" alignment="left" inset="2" id="T7e-Fz-VM5">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" usesAppearanceFont="YES"/>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="setIsAnalog:" target="APp-CA-AX7" id="C16-Yb-7l9"/>
+                                            </connections>
+                                        </button>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2MG-Ih-PUx">
+                                            <rect key="frame" x="18" y="891" width="72" height="16"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" title="モード選択: " id="vdz-rc-n7H">
+                                                <font key="font" usesAppearanceFont="YES"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
+                                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f0i-fG-lKY" customClass="HandImageView" customModule="CountDownTimer" customModuleProvider="target">
+                                            <rect key="frame" x="152" y="557" width="223" height="138"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <imageCell key="cell" selectable="YES" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="1L8-bs-yxn"/>
+                                        </imageView>
+                                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c62-oG-q1r" customClass="HandImageView" customModule="CountDownTimer" customModuleProvider="target">
+                                            <rect key="frame" x="152" y="557" width="223" height="138"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="xoG-nM-VEq"/>
+                                        </imageView>
+                                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xeH-xc-KlW" customClass="HandImageView" customModule="CountDownTimer" customModuleProvider="target">
+                                            <rect key="frame" x="152" y="557" width="223" height="138"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="UTY-Uh-IFy"/>
+                                        </imageView>
+                                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gou-AJ-gZS">
+                                            <rect key="frame" x="152" y="557" width="223" height="138"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="q5O-u7-twM"/>
+                                        </imageView>
+                                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xGj-3j-zMn" customClass="AnimationImageView" customModule="CountDownTimer" customModuleProvider="target">
+                                            <rect key="frame" x="152" y="557" width="223" height="137"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" id="U3z-N0-U0o"/>
+                                        </imageView>
+                                        <view id="3bd-5d-UeR" customClass="DigitalPreviewLabel" customModule="CountDownTimer" customModuleProvider="target">
+                                            <rect key="frame" x="20" y="51" width="408" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LBu-Jt-mV0">
+                                                    <rect key="frame" x="-2" y="0.0" width="412" height="128"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    <textFieldCell key="cell" lineBreakMode="clipping" alignment="center" id="IDO-9J-1gE">
+                                                        <font key="font" metaFont="system" size="100"/>
+                                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    </textFieldCell>
+                                                </textField>
+                                                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R7A-ux-64p" customClass="AnimationImageView" customModule="CountDownTimer" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="408" height="128"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" id="vdh-BH-r8j"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                    </subviews>
+                                </view>
+                            </subviews>
+                        </clipView>
+                        <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="gNT-DM-qzg">
+                            <rect key="frame" x="-100" y="-100" width="448" height="16"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                        <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="8AI-eC-8kU">
+                            <rect key="frame" x="433" y="1" width="16" height="973"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                    </scrollView>
+                    <connections>
+                        <outlet property="afterDatePicker" destination="FcY-O2-pSs" id="HmE-9D-GKE"/>
+                        <outlet property="afterFontColorWell" destination="EAl-L6-KLj" id="xQU-wF-0YI"/>
+                        <outlet property="analogAnimationImageView" destination="xGj-3j-zMn" id="HwK-LB-XZC"/>
+                        <outlet property="analogRadioButton" destination="8BA-oh-pOG" id="8bm-ZX-5KI"/>
+                        <outlet property="animation1URLTextField" destination="v4Z-zZ-EqX" id="MQM-iv-x7A"/>
+                        <outlet property="animation2URLTextField" destination="LaX-89-hdY" id="1M9-Ud-HgT"/>
+                        <outlet property="animation3URLTextField" destination="YxG-Gf-Jwd" id="DdO-PS-A1R"/>
+                        <outlet property="animation4URLTextField" destination="8PV-jJ-lEp" id="Wsm-rz-fzR"/>
+                        <outlet property="baseFontColorWell" destination="EbB-up-9yT" id="apr-EF-yqe"/>
+                        <outlet property="beforeDatePicker" destination="ngL-o0-mox" id="HVn-vi-4kM"/>
+                        <outlet property="beforeFontColorWell" destination="bOf-6k-9xN" id="L4T-xG-BJC"/>
+                        <outlet property="clockRadioButton" destination="Bnz-gk-yAH" id="5lP-sr-f8Y"/>
+                        <outlet property="digitalAnimationImageView" destination="R7A-ux-64p" id="bYh-jw-8yD"/>
+                        <outlet property="digitalPreviewLabel" destination="3bd-5d-UeR" id="zoW-NA-HZR"/>
+                        <outlet property="digitalRadioButton" destination="YsQ-1d-vMh" id="Bm5-SU-cU9"/>
+                        <outlet property="dueDate1DatePicker" destination="eqp-zq-dTz" id="3Hn-ME-sow"/>
+                        <outlet property="dueDate2DatePicker" destination="A6F-L0-Dfe" id="tIK-G9-s5k"/>
+                        <outlet property="faceImageView" destination="Gou-AJ-gZS" id="z6g-ef-chK"/>
+                        <outlet property="faceURLTextField" destination="UcB-cQ-LsO" id="mt6-CE-ocb"/>
+                        <outlet property="fontTextField" destination="R3J-eT-SZg" id="r1w-n6-B77"/>
+                        <outlet property="hourHandImageView" destination="f0i-fG-lKY" id="wS2-bR-Vag"/>
+                        <outlet property="hourURLTextField" destination="V6O-hs-6Yj" id="JNw-Bb-fTr"/>
+                        <outlet property="minuteHandImageView" destination="c62-oG-q1r" id="QeW-Mn-BWV"/>
+                        <outlet property="minuteURLTextField" destination="Z72-vR-z3K" id="G4Z-4h-RHF"/>
+                        <outlet property="opacitySlider" destination="y88-yj-E4e" id="dRq-ml-WUw"/>
+                        <outlet property="opacityTextField" destination="L1h-ZS-RJ5" id="BQH-Kf-g17"/>
+                        <outlet property="secondHandImageView" destination="xeH-xc-KlW" id="vat-bw-HZU"/>
+                        <outlet property="secondURLTextField" destination="bGO-m6-taW" id="INM-I3-jLz"/>
+                        <outlet property="selectFontButton" destination="o5L-Bl-46m" id="4eb-CS-gW1"/>
+                        <outlet property="switchCurrentTimeButton" destination="uqF-ny-omw" id="h2j-6K-8MF"/>
+                        <outlet property="timerRadioButton" destination="w5A-7C-YAe" id="hkB-9J-U85"/>
+                    </connections>
+                </viewController>
+                <customObject id="Sak-zC-C1I" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <userDefaultsController representsSharedInstance="YES" id="aQy-Vv-aRk"/>
+            </objects>
+            <point key="canvasLocation" x="301" y="-975"/>
+        </scene>
+        <!--Extension View Controller-->
+        <scene sceneID="cN9-ff-BXd">
+            <objects>
+                <viewController id="dfK-Rb-bSo" customClass="ExtensionViewController" customModule="CountDownTimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="5gc-YE-bkq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="gdE-r2-ADb" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="301" y="-257"/>
+        </scene>
+    </scenes>
+</document>
