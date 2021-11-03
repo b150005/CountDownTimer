@@ -1,4 +1,4 @@
-# CountDownTimer　![dependency](https://img.shields.io/badge/KeyboardShortcuts-1.0.0-brightgreen)
+# CountDownTimer　![dependency](https://img.shields.io/badge/KeyboardShortcuts-1.3.0-brightgreen)
 **CountDownTimer**は、オリジナルのアナログ時計とデジタル時計を表示するmacOS用アプリケーションです。
 アナログ時計・デジタル時計について、以下のカスタマイズが可能です。
 
