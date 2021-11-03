@@ -1,6 +1,6 @@
 # CountDownTimer　![dependency](https://img.shields.io/badge/KeyboardShortcuts-1.3.0-brightgreen)
 **CountDownTimer**は、オリジナルのアナログ時計とデジタル時計を表示するmacOS用アプリケーションです。
-アナログ時計・デジタル時計について、以下のカスタマイズが可能です。
+アナログ時計・デジタル時計について、以下のカスタマイズが可能です。(`gif`ファイルのみ利用可能)
 
 ## アナログ時計
 
@@ -34,3 +34,9 @@
 
 <img width="612" alt="スクリーンショット 2021-11-03 12 44 26" src="https://user-images.githubusercontent.com/68260279/140007420-534af960-1e2d-4b76-a75d-2c93a5eeb65c.png">
 <img width="612" alt="スクリーンショット 2021-11-03 12 44 33" src="https://user-images.githubusercontent.com/68260279/140007428-b531ced0-70cd-444b-b082-0b128fd70755.png">
+
+## 使い方
+
+1. 環境設定(Preference, ⌘+,)で設定画面を開き、モード・時計盤等を選択
+2. ⌘+Rでメイン画面を更新
+3. 設定を変更した場合は再度2.を実行
