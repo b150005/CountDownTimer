@@ -15,11 +15,12 @@
 - フォントの透明度
 - タイマーとしても利用可能(最大2個のタイマーとして利用可能)
 
-## 利用言語・フレームワーク
+## 利用言語・フレームワーク・ライブラリ
 
 - Swift
 - Cocoa
 - CoreAnimation
+- [KeyboardShortcuts](https://github.com/sindresorhus/KeyboardShortcuts)
 
 ## UI
 
